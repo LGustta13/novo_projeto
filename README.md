@@ -42,8 +42,13 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 ### Tópicos
 
 <ul>
-<li><a href="#-conteudo">Vite</a></li>
+<li><a href="#-conteudo">Conteúdo</a></li>
+<li><a href="#-vite">Vite</a></li>
 </ul>
+
+### Conteúdo
+
+- web: pasta no qual se encontra a aplicação FrontEnd
 
 ### Vite
 
