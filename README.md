@@ -24,6 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - Git e Github
 - Transformers.js
+- NodeJS
 
 ## 💻 Projeto
 
@@ -45,11 +46,13 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 <li><a href="#-conteudo">Conteúdo</a></li>
 <li><a href="#-vite">Vite</a></li>
 <li><a href="#-deploy">Deploy</a></li>
+<li><a href="#-backend">Backend</a></li>
 </ul>
 
 ### Conteúdo
 
 - web: pasta no qual se encontra a aplicação FrontEnd
+- server: pasta que se encontra os serviços do BackEnd
 
 ### Vite
 
@@ -68,5 +71,29 @@ npm run web
 ### Deploy
 
 Para o Deploy da aplicação foi utilizado o Github Actions. Dessa forma, o arquivo de configuração se encontra na pasta .github, segundo a documentação do site [ViteJS](https://vitejs.dev/guide/static-deploy.html)
+
+### Backend
+
+Utilização do NodeJS para a criação do serviço web. Permitir a execução do JavaScript fora do navegador (quando inicia o servidor, as rotas criadas entendem o código JavaScript, resultando em um serviço)
+
+```
+GET https://localhost:3333/summary/7
+<method> <protocol>://<address>:<port>/<resource>/<route params>
+```
+
+```
+npm install express cors axios ytdl-core@4.10.0
+```
+
+A **ytdl** possibilita baixar vídeos do Youtube
+O **cors** possibilita que qualquer ou alguma origem específica consiga requisitar nas rotas do BackEnd
+O **express** é utilizado para criar as rotas das APIs
+O **axios** é utilizado para buscar uma rota, tanto no FrontEnd quanto no BackEnd
+
+Para ficar observando as mudanças no servidor (não precisa reiniciar com mudanças no código)
+
+```
+ node --watch ./index.js  <!--versão >18.11-->
+```
 
 ---
