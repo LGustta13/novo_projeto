@@ -1,4 +1,4 @@
-function toggleMode() {
+export function toggleMode() {
   const icon = document.querySelector("#theme i")
   const value = document.documentElement.classList.toggle("light")
 
