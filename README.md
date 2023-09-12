@@ -60,6 +60,8 @@ Utilizado para criar o Front-end. Com o borderplate do Vite, é possível utiliz
 
 ```Javascript
 npm create vite@latest
+npm install
+npm run web
 ```
 
 ---
