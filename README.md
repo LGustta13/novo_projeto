@@ -53,6 +53,7 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 
 - web: pasta no qual se encontra a aplicação FrontEnd
 - server: pasta que se encontra os serviços do BackEnd
+- tmp: pasta temporária com o vídeo até a aplicação fazer a descrição
 
 ### Vite
 
