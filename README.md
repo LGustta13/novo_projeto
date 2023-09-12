@@ -44,6 +44,7 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 <ul>
 <li><a href="#-conteudo">Conteúdo</a></li>
 <li><a href="#-vite">Vite</a></li>
+<li><a href="#-deploy">Deploy</a></li>
 </ul>
 
 ### Conteúdo
@@ -63,5 +64,9 @@ npm create vite@latest
 npm install
 npm run web
 ```
+
+### Deploy
+
+Para o Deploy da aplicação foi utilizado o Github Actions. Dessa forma, o arquivo de configuração se encontra na pasta .github, segundo a documentação do site [ViteJS](https://vitejs.dev/guide/static-deploy.html)
 
 ---

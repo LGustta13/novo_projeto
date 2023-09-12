@@ -28,6 +28,10 @@
   background: var(--third-bg-color);
 }
 
+#form > input::placeholder {
+  color: var(--placeholder-color);
+}
+
 #form > button {
   width: 2.8rem;
   border-radius: 5px;
