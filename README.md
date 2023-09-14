@@ -44,12 +44,12 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 ### Tópicos
 
 <ul>
-<li><a href="#-conteudo">Conteúdo</a></li>
-<li><a href="#-vite">Vite</a></li>
-<li><a href="#-deploy">Deploy</a></li>
-<li><a href="#-env">Variáveis de Ambiente</a></li>
-<li><a href="#-backend">Backend</a></li>
-<li><a href="#-ia">Inteligência Artificial</a></li>
+<li><a href="###-conteúdo">Conteúdo</a></li>
+<li><a href="###-vite">Vite</a></li>
+<li><a href="###-deploy">Deploy</a></li>
+<li><a href="###-variáveis de ambiente">Variáveis de Ambiente</a></li>
+<li><a href="###-backend">Backend</a></li>
+<li><a href="###-inteligência artificial">Inteligência Artificial</a></li>
 </ul>
 
 ### Conteúdo
