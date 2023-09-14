@@ -1,7 +1,8 @@
 import { pipeline } from "@xenova/transformers"
+import { transcriptionTextExample } from "./utils/transcriptionText.js"
 
 export async function transcribe(audio) {
-  // return "asmdlamdmaiwmdçamda,wdawdça,dçoa,wdla,sdlçadmaakc"
+  return transcriptionTextExample
 
   try {
     console.log("Realizando a transcrição...")

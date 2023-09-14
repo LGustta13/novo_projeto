@@ -9,7 +9,7 @@ import { summarize } from "./summarize.js"
 const port = 3333
 const app = express()
 app.use(cors())
-app.use(express.json()) //Pois vai receber conteúdos no formato JSON, body params
+app.use(express.json()) //Pois vai enviar conteúdos no formato JSON no body params
 
 /** ROTAS **/
 app.get("/summary/:id", async (request, response) => {

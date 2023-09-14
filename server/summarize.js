@@ -1,7 +1,8 @@
 import { pipeline } from "@xenova/transformers"
+import { summarizeTextExample } from "./utils/summarizeText.js"
 
 export async function summarize(text) {
-  // return "asdasdaw"
+  return summarizeTextExample
 
   try {
     console.log("Realizando o resumo...")
