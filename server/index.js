@@ -1,5 +1,7 @@
 import cors from "cors"
 import express from "express"
+
+import { convert } from "./convert.js"
 import { download } from "./download.js"
 import { transcribe } from "./transcribe.js"
 import { summarize } from "./summarize.js"
@@ -11,16 +13,30 @@ app.use(express.json()) //Pois vai receber conteúdos no formato JSON, body para
 
 /** ROTAS **/
 app.get("/summary/:id", async (request, response) => {
-  const { id } = request.params
-  await download(id)
-  const result = await transcribe()
-  response.json({ result })
+  try {
+    const { id } = request.params
+
+    await download(id)
+    const audioConverted = await convert()
+    const result = await transcribe(audioConverted)
+
+    return response.json({ result })
+  } catch (error) {
+    console.log(error)
+    return response.json({ error })
+  }
 })
 
 app.post("/summary", async (request, response) => {
-  const { text } = request.body
-  const result = await summarize()
-  response.json({ result })
+  try {
+    const { text } = request.body
+    const result = await summarize()
+
+    return response.json({ result })
+  } catch (error) {
+    console.log(error)
+    return response.json({ error })
+  }
 })
 
 app.listen(port, () => console.log(`Server is running on port ${port}`))
