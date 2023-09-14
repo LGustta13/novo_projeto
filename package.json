@@ -6,6 +6,9 @@
   "author": "Luis Gustavo Oliveira",
   "homepage": "https://LGustta13.github.io/shorts-summary/",
   "type": "module",
+  "engines": {
+    "node": "18.16.0"
+  },
   "scripts": {
     "web": "vite",
     "build": "vite build",
