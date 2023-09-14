@@ -9,7 +9,10 @@ import { summarize } from "./summarize.js"
 const port = 3333
 const app = express()
 const corsOptions = {
-  origin: "https://lgustta13.github.io/shorts-summary/",
+  origin: [
+    "https://lgustta13.github.io/shorts-summary/",
+    "https://lgustta13.github.io/",
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 }
@@ -19,6 +22,10 @@ app.use(express.json()) //Pois vai enviar conteúdos no formato JSON no body par
 /** ROTAS **/
 app.get("/summary/:id", async (request, response) => {
   try {
+    response.setHeader("Access-Control-Allow-Origin", [
+      "https://lgustta13.github.io/shorts-summary/",
+      "https://lgustta13.github.io/",
+    ])
     const { id } = request.params
 
     await download(id)
@@ -34,6 +41,10 @@ app.get("/summary/:id", async (request, response) => {
 
 app.post("/summary", async (request, response) => {
   try {
+    response.setHeader("Access-Control-Allow-Origin", [
+      "https://lgustta13.github.io/shorts-summary/",
+      "https://lgustta13.github.io/",
+    ])
     const { text } = request.body
     const result = await summarize(text)
 
