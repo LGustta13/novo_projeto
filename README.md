@@ -24,13 +24,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - Git e Github
 - Transformers.js
+- Bart.AI e Whisper.AI
 - NodeJS
 
 ## 💻 Projeto
 
 O Shorts é uma aplicação web que permite ao usuário realizar pequenos resumos ou descrições sobre vídeos shorts que podem ser encontrados no Youtube.
 
-- [Acesse o projeto finalizado, online](#)
+- [Acesse o projeto finalizado, online](https://lgustta13.github.io/shorts-summary/)
 
 ## 🔖 Layout
 
