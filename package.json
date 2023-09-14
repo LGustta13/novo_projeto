@@ -10,7 +10,7 @@
     "web": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "env YTDL_NO_UPDATE=1 node --watch --no-warnings ./server/index.js"
+    "server": "node --watch --no-warnings ./server/index.js"
   },
   "devDependencies": {
     "vite": "^4.4.5"

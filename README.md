@@ -46,7 +46,9 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 <li><a href="#-conteudo">Conteúdo</a></li>
 <li><a href="#-vite">Vite</a></li>
 <li><a href="#-deploy">Deploy</a></li>
+<li><a href="#-env">Variáveis de Ambiente</a></li>
 <li><a href="#-backend">Backend</a></li>
+<li><a href="#-ia">Inteligência Artificial</a></li>
 </ul>
 
 ### Conteúdo
@@ -73,6 +75,13 @@ npm run web
 
 Para o Deploy da aplicação foi utilizado o Github Actions. Dessa forma, o arquivo de configuração se encontra na pasta .github, segundo a documentação do site [ViteJS](https://vitejs.dev/guide/static-deploy.html)
 
+### Variáveis de ambiente
+
+As variáveis de ambiente são acessadas dentro do arquivo .env, por meio do prefixo VITE conforme a [documentação](https://vitejs.dev/guide/env-and-mode.html):
+
+- VITE\_: significa que a variável terá seu conteúdo visível no browser
+- sem o prefixo: a variável não tem seu valor visível no browser
+
 ### Backend
 
 Utilização do NodeJS para a criação do serviço web. Permitir a execução do JavaScript fora do navegador (quando inicia o servidor, as rotas criadas entendem o código JavaScript, resultando em um serviço)
@@ -90,11 +99,14 @@ A **ytdl** possibilita baixar vídeos do Youtube
 O **cors** possibilita que qualquer ou alguma origem específica consiga requisitar nas rotas do BackEnd
 O **express** é utilizado para criar as rotas das APIs
 O **axios** é utilizado para buscar uma rota, tanto no FrontEnd quanto no BackEnd
+O **fs** é utilizado para manipular arquivos armazenados nos diretórios, permite criar arquivos de dados de vídeo
 
 Para ficar observando as mudanças no servidor (não precisa reiniciar com mudanças no código)
 
 ```
  node --watch ./index.js  <!--versão >18.11-->
 ```
+
+### Inteligência Artificial
 
 ---
