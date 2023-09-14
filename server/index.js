@@ -22,10 +22,6 @@ app.use(express.json()) //Pois vai enviar conteúdos no formato JSON no body par
 /** ROTAS **/
 app.get("/summary/:id", async (request, response) => {
   try {
-    response.setHeader("Access-Control-Allow-Origin", [
-      "https://lgustta13.github.io/shorts-summary/",
-      "https://lgustta13.github.io/",
-    ])
     const { id } = request.params
 
     await download(id)
@@ -41,10 +37,6 @@ app.get("/summary/:id", async (request, response) => {
 
 app.post("/summary", async (request, response) => {
   try {
-    response.setHeader("Access-Control-Allow-Origin", [
-      "https://lgustta13.github.io/shorts-summary/",
-      "https://lgustta13.github.io/",
-    ])
     const { text } = request.body
     const result = await summarize(text)
 
