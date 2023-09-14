@@ -7,7 +7,7 @@ Aplicação que resume e cria descrições de vídeos do Youtube. <br/>
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-anotações">Anotações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-anotações">Anotações</a>
 </p>
 
 <br>
@@ -44,21 +44,25 @@ Acesse o Notion com informações da aplicação [aqui](https://efficient-sloth-
 ### Tópicos
 
 <ul>
-<li><a href="###-conteúdo">Conteúdo</a></li>
-<li><a href="###-vite">Vite</a></li>
-<li><a href="###-deploy">Deploy</a></li>
-<li><a href="###-variáveis de ambiente">Variáveis de Ambiente</a></li>
-<li><a href="###-backend">Backend</a></li>
-<li><a href="###-inteligência artificial">Inteligência Artificial</a></li>
+<li><a href="#conteúdo">Conteúdo</a></li>
+<li><a href="#vite">Vite</a></li>
+<li><a href="#deploy">Deploy</a></li>
+<li><a href="#variáveis-de-ambiente">Variáveis de Ambiente</a></li>
+<li><a href="#backend">Backend</a></li>
+<li><a href="#inteligência-artificial">Inteligência Artificial</a></li>
 </ul>
 
 ### Conteúdo
+
+<div id="#conteúdo"></div>
 
 - web: pasta no qual se encontra a aplicação FrontEnd
 - server: pasta que se encontra os serviços do BackEnd
 - tmp: pasta temporária com o vídeo até a aplicação fazer a descrição
 
 ### Vite
+
+<div id="#vite"></div>
 
 Utilizado para criar o Front-end. Com o borderplate do Vite, é possível utilizar um template de projeto para inicializar o desenvolvimento. A princípio pede-se:
 
@@ -74,9 +78,13 @@ npm run web
 
 ### Deploy
 
+<div id="#deploy"></div>
+
 Para o Deploy da aplicação foi utilizado o Github Actions. Dessa forma, o arquivo de configuração se encontra na pasta .github, segundo a documentação do site [ViteJS](https://vitejs.dev/guide/static-deploy.html)
 
 ### Variáveis de ambiente
+
+<div id="#variáveis-de-ambiente"></div>
 
 As variáveis de ambiente são acessadas dentro do arquivo .env, por meio do prefixo VITE conforme a [documentação](https://vitejs.dev/guide/env-and-mode.html):
 
@@ -84,6 +92,8 @@ As variáveis de ambiente são acessadas dentro do arquivo .env, por meio do pre
 - sem o prefixo: a variável não tem seu valor visível no browser
 
 ### Backend
+
+<div id="#backend"></div>
 
 Utilização do NodeJS para a criação do serviço web. Permitir a execução do JavaScript fora do navegador (quando inicia o servidor, as rotas criadas entendem o código JavaScript, resultando em um serviço)
 
@@ -109,6 +119,8 @@ Para ficar observando as mudanças no servidor (não precisa reiniciar com mudan
 ```
 
 ### Inteligência Artificial
+
+<div id="#inteligência-artificial"></div>
 
 - [Whisper](https://openai.com/research/whisper): ASR(Automatic Speech Recognition) modelo da OpenAI de reconhecimento de fala
 - [Bart](https://www.width.ai/post/bart-text-summarization): modelo para resumo de textos
