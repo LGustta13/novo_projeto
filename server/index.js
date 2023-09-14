@@ -6,7 +6,7 @@ import { download } from "./download.js"
 import { transcribe } from "./transcribe.js"
 import { summarize } from "./summarize.js"
 
-const port = 3333
+const port = 10000
 const app = express()
 const corsOptions = {
   origin: [
