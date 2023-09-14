@@ -95,11 +95,11 @@ GET https://localhost:3333/summary/7
 npm install express cors axios ytdl-core@4.10.0
 ```
 
-A **ytdl** possibilita baixar vídeos do Youtube
-O **cors** possibilita que qualquer ou alguma origem específica consiga requisitar nas rotas do BackEnd
-O **express** é utilizado para criar as rotas das APIs
-O **axios** é utilizado para buscar uma rota, tanto no FrontEnd quanto no BackEnd
-O **fs** é utilizado para manipular arquivos armazenados nos diretórios, permite criar arquivos de dados de vídeo
+A **ytdl** possibilita baixar vídeos do Youtube.
+O **cors** possibilita que qualquer ou alguma origem específica consiga requisitar nas rotas do BackEnd.
+O **express** é utilizado para criar as rotas das APIs.
+O **axios** é utilizado para buscar uma rota, tanto no FrontEnd quanto no BackEnd.
+O **fs** é utilizado para manipular arquivos armazenados nos diretórios, permite criar arquivos de dados de vídeo.
 
 Para ficar observando as mudanças no servidor (não precisa reiniciar com mudanças no código)
 
@@ -131,7 +131,7 @@ Para rodar os modelos, deve-se acessá-los pela API pipeline() no qual abstrai t
 import {pipeline} from "@xenova/transformers"
 
 let pipe = await pipeline('sentiment-analysis');
-// (task="automatic speech recognition", model="facebook/wav2vec2-base-960h")
+// (task="automatic-speech-recognition", model="Xenova/whisper-small")
 
 let result = await pipe(dados)
 ```
@@ -150,12 +150,14 @@ Dentre os modelos acessíveis pela API pipeline e dentro do HuggingFace, temos o
 
 O [ffmpeg](https://www.ffmpeg.org/ffmpeg.html#Synopsis) é um framework que consegue fazer decode, encode, stream, filtrar e tocar arquivos multimídia em diferentes formatos. Destinado para desenvolvedores, é um conversor de mídia universal
 
-##### fluent-ffmpeg
+#### fluent-ffmpeg
+
 A biblioteca é uma abstrção da CLI do ffmpeg para um módulo Node.js simples de utilizar. Existem muitos exemplos na [documentação](https://www.npmjs.com/package/fluent-ffmpeg) de inputs como vídeo ou áudio
 
-##### ffmpeg-static
+#### ffmpeg-static
+
 A função da biblioteca é fazer download de arquivos binários de quaisquer localização dentro do Windows, Linux e macOS
 
 #### node-wav
 
-## Será utilizada para converter o conteúdo do vídeo de mp4 para wav, ou seja, gerar o áudio puro di vídeo conforme sua frequência
+Será utilizada para converter o conteúdo do vídeo de mp4 para wav, ou seja, gerar o áudio puro do vídeo conforme sua frequência
