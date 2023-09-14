@@ -8,7 +8,12 @@ import { summarize } from "./summarize.js"
 
 const port = 3333
 const app = express()
-app.use(cors())
+const corsOptions = {
+  origin: "https://lgustta13.github.io/shorts-summary/",
+  credentials: true,
+  optionSuccessStatus: 200,
+}
+app.use(cors(corsOptions))
 app.use(express.json()) //Pois vai enviar conteúdos no formato JSON no body params
 
 /** ROTAS **/
