@@ -137,6 +137,8 @@ let result = await pipe(dados)
 ```
 
 Primeiro é alocado uma pipeline e depois utiliza o modelo. Os modelos que podem ser utilizados podem ser acessados por este [link](https://huggingface.co/models), vale tanto para o Python quanto para JavaScript no browser e no backend com Node.js.
+Pode acontecer de demorar muito para dar uma resposta, mas isso é normal. Tem relação com a velocidade da Internet e o número de requisições no uso do modelo para vários usuários, o que pode gerar filas.
+Dependendo do conteúdo no input, a IA pode não ter uma precisão boa.
 
 #### Whisper
 

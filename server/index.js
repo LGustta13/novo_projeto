@@ -30,7 +30,7 @@ app.get("/summary/:id", async (request, response) => {
 app.post("/summary", async (request, response) => {
   try {
     const { text } = request.body
-    const result = await summarize()
+    const result = await summarize(text)
 
     return response.json({ result })
   } catch (error) {
