@@ -109,4 +109,53 @@ Para ficar observando as mudanças no servidor (não precisa reiniciar com mudan
 
 ### Inteligência Artificial
 
----
+- [Whisper](https://openai.com/research/whisper): ASR(Automatic Speech Recognition) modelo da OpenAI de reconhecimento de fala
+- [Bart](https://www.width.ai/post/bart-text-summarization): modelo para resumo de textos
+- [Transformer.js](https://huggingface.co/models): permite utilzar modelos de IA no navegador ou servidor com JavaScript
+
+```
+npm install @xenova/transformers fluent-ffmpeg ffmpeg-static node-wav
+```
+
+#### Transformer.js
+
+```
+npm install @xenova/transformers
+```
+
+O [Transformer](https://huggingface.co/docs/transformers/quicktour) é uma biblioteca que fornece API para utilizar, baixar ou treinar modelos pretreinados. Isso significa que não precisa criar ou treinar novos modelos, basta só escolher um que resolva o nosso problema.
+A princípio, é utilizado com os Frameworks de ML PyTorch, TensorFlow e JAX, ou seja, Python. Porém existe a versão para web, o [Transformer.js](https://huggingface.co/docs/transformers.js/index). Os dois têm suas peculiaridades devido a linguagem, mas a ideia de uso é a mesma.
+Para rodar os modelos, deve-se acessá-los pela API pipeline() no qual abstrai todo código complexo da biblioteca transformers, criando uma instância, apresentando a task e o modelo:
+
+```
+import {pipeline} from "@xenova/transformers"
+
+let pipe = await pipeline('sentiment-analysis');
+// (task="automatic speech recognition", model="facebook/wav2vec2-base-960h")
+
+let result = await pipe(dados)
+```
+
+Primeiro é alocado uma pipeline e depois utiliza o modelo. Os modelos que podem ser utilizados podem ser acessados por este [link](https://huggingface.co/models), vale tanto para o Python quanto para JavaScript no browser e no backend com Node.js.
+
+#### Whisper
+
+Dentre os modelos acessíveis pela API pipeline e dentro do HuggingFace, temos o [Whisper](https://huggingface.co/openai/whisper-small), utilizado para reconhecimento de fala automático.
+
+#### Bart
+
+Dentre os modelos acessíveis pela API pipeline e dentro do HuggingFace, temos o [Bart](https://huggingface.co/facebook/bart-large-cnn), utilizado para resumo de textos.
+
+#### ffmpeg
+
+O [ffmpeg](https://www.ffmpeg.org/ffmpeg.html#Synopsis) é um framework que consegue fazer decode, encode, stream, filtrar e tocar arquivos multimídia em diferentes formatos. Destinado para desenvolvedores, é um conversor de mídia universal
+
+##### fluent-ffmpeg
+A biblioteca é uma abstrção da CLI do ffmpeg para um módulo Node.js simples de utilizar. Existem muitos exemplos na [documentação](https://www.npmjs.com/package/fluent-ffmpeg) de inputs como vídeo ou áudio
+
+##### ffmpeg-static
+A função da biblioteca é fazer download de arquivos binários de quaisquer localização dentro do Windows, Linux e macOS
+
+#### node-wav
+
+## Será utilizada para converter o conteúdo do vídeo de mp4 para wav, ou seja, gerar o áudio puro di vídeo conforme sua frequência
